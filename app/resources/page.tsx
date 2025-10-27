@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Resources() {
   const resources = [
@@ -61,23 +62,26 @@ export default function Resources() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen py-24 sm:py-32 px-6 sm:px-8">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex justify-center snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="mb-24 sm:mb-32 text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-              <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
-                Learning Resources
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] max-w-3xl mx-auto leading-relaxed px-4">
-              Explore curated resources to help you learn game development, AR/VR, and immersive technologies. 
-              All links below are free or have free tiers.
-            </p>
-          </div>
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full text-center space-y-6 sm:space-y-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+                <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
+                  Learning Resources
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] mx-auto leading-relaxed">
+                Explore curated resources to help you learn game development, AR/VR, and immersive technologies. 
+                All links below are free or have free tiers.
+              </p>
+            </div>
+          </section>
 
           {/* Resources Grid */}
-          <div className="grid md:grid-cols-2 gap-10 mb-32">
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full grid md:grid-cols-2 gap-10">
             {resources.map((resourceGroup, index) => (
               <div
                 key={index}
@@ -106,9 +110,12 @@ export default function Resources() {
               </div>
             ))}
           </div>
+          </section>
 
           {/* Quick Tips Section */}
-          <div className="mb-24 p-12 sm:p-16 rounded-2xl bg-gradient-to-r from-[#0066ff]/10 to-[#00d9ff]/10 border border-[#0066ff]/30">
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full space-y-12 sm:space-y-16">
+              <div className="p-12 sm:p-16 rounded-2xl bg-gradient-to-r from-[#0066ff]/10 to-[#00d9ff]/10 border border-[#0066ff]/30">
             <h2 className="text-3xl sm:text-4xl font-bold text-[#00d9ff] mb-12 text-center">Getting Started Tips</h2>
             <div className="grid md:grid-cols-3 gap-10">
               <div className="p-8 rounded-xl bg-[#0a0f1f]/50 border border-[#0066ff]/20 hover:border-[#00d9ff]/50 transition-all duration-300 hover:-translate-y-1">
@@ -132,15 +139,18 @@ export default function Resources() {
           {/* Call to Action */}
           <div className="text-center">
             <div className="text-6xl mb-6">💡</div>
-            <p className="text-lg sm:text-xl text-[#b0b0b0] mb-8 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl text-[#b0b0b0] mb-8 mx-auto">
               Have a resource to share? Want to learn more? Join our Discord community!
             </p>
             <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-[#0066ff]/50 transition-all duration-300 transform hover:scale-105 text-lg">
               Get Involved
             </a>
           </div>
+            </div>
+          </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 export default function Team() {
   const leaders = [
@@ -42,23 +43,26 @@ export default function Team() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <main className="flex justify-center snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <section className="py-24 sm:py-32 lg:py-40 text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-10">
-              <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
-                Meet Our Team
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] max-w-4xl mx-auto leading-relaxed px-4">
-              Our passionate team of developers, designers, and creators working together to push the boundaries 
-              of game development and immersive technology.
-            </p>
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full text-center space-y-6 sm:space-y-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+                <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
+                  Meet Our Team
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] mx-auto leading-relaxed">
+                Our passionate team of developers, designers, and creators working together to push the boundaries 
+                of game development and immersive technology.
+              </p>
+            </div>
           </section>
 
           {/* Leadership */}
-          <section className="py-20 sm:py-24 lg:py-32">
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full space-y-12 sm:space-y-16">
             <div className="text-center mb-16 sm:mb-20">
               <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff] mb-5">Leadership Team</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0]">Steering Parallax towards excellence</p>
@@ -78,10 +82,12 @@ export default function Team() {
                 </div>
               ))}
             </div>
+            </div>
           </section>
 
           {/* Core Team Members */}
-          <section className="py-20 sm:py-24 lg:py-32">
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full space-y-12 sm:space-y-16">
             <div className="text-center mb-16 sm:mb-20">
               <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff] mb-5">Core Team Members</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0]">The backbone of our community</p>
@@ -98,14 +104,16 @@ export default function Team() {
                 </div>
               ))}
             </div>
+            </div>
           </section>
 
           {/* Join Section */}
-          <section className="py-20 sm:py-24 lg:py-32">
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full">
             <div className="p-12 sm:p-14 lg:p-16 rounded-2xl bg-gradient-to-r from-[#0066ff]/10 to-[#00d9ff]/10 border border-[#0066ff]/30 text-center">
               <div className="text-7xl mb-10">🚀</div>
               <h2 className="text-4xl sm:text-5xl font-bold mb-8">Join Our Team</h2>
-              <p className="text-lg sm:text-xl text-[#b0b0b0] mb-10 max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#b0b0b0] mb-10  mx-auto leading-relaxed">
                 We&apos;re always looking for passionate individuals to join our team. Whether you&apos;re a developer, 
                 designer, artist, or enthusiast, there&apos;s a place for you in Parallax!
               </p>
@@ -113,18 +121,13 @@ export default function Team() {
                 Apply Now
               </a>
             </div>
+            </div>
           </section>
         </div>
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#0066ff]/20 py-8 sm:py-12 px-4 sm:px-6 lg:px-8 bg-[#050a15]/50">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-[#b0b0b0] text-sm sm:text-base">
-            © 2024 Parallax Club - PESU Electronic City Campus. All rights reserved.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

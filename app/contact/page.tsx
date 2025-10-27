@@ -1,6 +1,7 @@
 'use client';
 
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { useState } from 'react';
 
 export default function Contact() {
@@ -54,22 +55,26 @@ export default function Contact() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen py-24 sm:py-32 px-6 sm:px-8">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex justify-center snap-y snap-mandatory overflow-y-scroll scroll-smooth">
+        <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="mb-24 sm:mb-32 text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-              <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
-                Get In Touch
-              </span>
-            </h1>
-            <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] max-w-3xl mx-auto leading-relaxed px-4">
-              Have questions? Want to join Parallax? Or interested in collaborating? 
-              We'd love to hear from you!
-            </p>
-          </div>
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full text-center space-y-6 sm:space-y-8">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold">
+                <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
+                  Get In Touch
+                </span>
+              </h1>
+              <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] mx-auto leading-relaxed">
+                Have questions? Want to join Parallax? Or interested in collaborating? 
+                We&apos;d love to hear from you!
+              </p>
+            </div>
+          </section>
 
-          <div className="grid lg:grid-cols-2 gap-16 mb-32">
+          {/* Contact Form and Info */}
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full grid lg:grid-cols-2 gap-16">
             {/* Contact Information */}
             <div>
               <h2 className="text-3xl sm:text-4xl font-bold text-[#00d9ff] mb-10">Contact Information</h2>
@@ -97,7 +102,7 @@ export default function Contact() {
                 <div className="flex flex-wrap gap-5">
                   {[
                     { icon: '🔗', name: 'LinkedIn', link: '#' },
-                    { icon: '🐦', name: 'Twitter', link: '#' },
+                    { icon: '👾', name: 'Itch.io', link: '#' },
                     { icon: '💜', name: 'Discord', link: '#' },
                     { icon: '📷', name: 'Instagram', link: '#' },
                   ].map((social, index) => (
@@ -196,15 +201,18 @@ export default function Contact() {
 
                 {isSubmitted && (
                   <div className="p-5 rounded-xl bg-[#00d9ff]/10 border border-[#00d9ff]/50 text-[#00d9ff] text-center font-semibold text-base">
-                    ✓ Thank you! We'll get back to you soon.
+                    ✓ Thank you! We&apos;ll get back to you soon.
                   </div>
                 )}
               </form>
             </div>
           </div>
+          </section>
 
           {/* FAQ Section */}
-          <div className="border-t border-[#0066ff]/20 pt-32">
+          <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
+            <div className="w-full space-y-12 sm:space-y-16">
+              <div className="border-t border-[#0066ff]/20 pt-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
               <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
                 Frequently Asked Questions
@@ -220,14 +228,6 @@ export default function Contact() {
                   q: 'What is the club membership fee?',
                   a: 'Parallax is completely free to join. We believe in making game dev accessible to everyone.',
                 },
-                {
-                  q: 'When do you meet?',
-                  a: 'We typically meet on Fridays at 6:00 PM at the PESU Electronic City campus. Check our calendar for specific dates.',
-                },
-                {
-                  q: 'Do you provide hardware access?',
-                  a: 'Yes! We have VR headsets and gaming equipment available for members. Special arrangements can be made for AR/VR projects.',
-                },
               ].map((faq, index) => (
                 <div
                   key={index}
@@ -239,8 +239,11 @@ export default function Contact() {
               ))}
             </div>
           </div>
+            </div>
+          </section>
         </div>
       </main>
+      <Footer />
     </>
   );
 }

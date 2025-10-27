@@ -1,4 +1,5 @@
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Link from 'next/link';
 
 export default function Home() {
@@ -29,8 +30,9 @@ export default function Home() {
     <>
       <Navbar />
       <main className="min-h-screen">
+        <div className="flex flex-col items-center gap-16 sm:gap-20 lg:gap-24">
         {/* Hero Section */}
-        <section className="relative min-h-[92vh] flex flex-col items-center justify-center px-6 sm:px-8 py-24 overflow-hidden">
+        <section className="relative min-h-[75vh] flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 overflow-hidden">
           {/* Animated background elements */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-20 left-10 w-96 h-96 bg-[#0066ff]/10 rounded-full blur-3xl animate-pulse" />
@@ -55,7 +57,7 @@ export default function Home() {
               </span>
             </h1>
 
-            <p className="text-base sm:text-lg md:text-xl text-[#b0b0b0] mb-12 max-w-3xl mx-auto leading-relaxed px-4">
+            <p className="text-base items-center sm:text-lg md:text-xl text-[#b0b0b0] mb-12 w-full mx-auto leading-relaxed px-4">
               Join Parallax, the Game Development and AR/VR club at PESU Electronic City Campus. 
               Create, innovate, and collaborate with fellow enthusiasts in cutting-edge immersive technologies.
             </p>
@@ -80,32 +82,32 @@ export default function Home() {
         </section>
 
         {/* Features Section */}
-        <section className="py-32 px-6 sm:px-8 relative">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative">
           <div className="max-w-7xl mx-auto">
-            <div className="text-center mb-20">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+            <div className="text-center mb-16 sm:mb-20 lg:mb-24">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
                 <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
                   What We Offer
                 </span>
               </h2>
-              <p className="text-lg text-[#b0b0b0] max-w-2xl mx-auto">
+              <p className="text-lg sm:text-xl text-[#b0b0b0] w-full mx-auto">
                 Discover the amazing opportunities and resources available to our members
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+            <div className="grid sm:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto place-items-center">
               {features.map((feature, index) => (
                 <div
                   key={index}
-                  className="group p-10 rounded-2xl bg-gradient-to-br from-[#0f1628] to-[#050a15] border border-[#0066ff]/20 hover:border-[#00d9ff]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0066ff]/20 hover:-translate-y-2"
+                  className="group p-10 lg:p-12 rounded-2xl bg-gradient-to-br from-[#0f1628] to-[#050a15] border border-[#0066ff]/20 hover:border-[#00d9ff]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0066ff]/20 hover:-translate-y-2 text-center"
                 >
-                  <div className="text-5xl mb-6 group-hover:scale-125 transition-transform duration-500">
+                  <div className="text-6xl lg:text-7xl mb-6 group-hover:scale-110 transition-transform duration-500">
                     {feature.icon}
                   </div>
-                  <h3 className="text-2xl font-bold text-[#e0e0e0] mb-4 group-hover:text-[#00d9ff] transition-colors duration-300">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-[#e0e0e0] mb-4 group-hover:text-[#00d9ff] transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-[#b0b0b0] leading-relaxed text-base">
+                  <p className="text-[#b0b0b0] leading-relaxed text-base lg:text-lg max-w-md mx-auto">
                     {feature.description}
                   </p>
                 </div>
@@ -115,43 +117,43 @@ export default function Home() {
         </section>
 
         {/* Stats Section */}
-        <section className="py-32 px-6 sm:px-8 relative overflow-hidden">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0066ff]/10 via-transparent to-[#00d9ff]/10" />
           <div className="max-w-7xl mx-auto relative z-10">
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
-              <div className="text-center p-8 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-3">500+</div>
-                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base">Active Members</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
+              <div className="text-center p-8 lg:p-10 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-4">500+</div>
+                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base lg:text-lg">Active Members</p>
               </div>
-              <div className="text-center p-8 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-3">50+</div>
-                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base">Events Per Year</p>
+              <div className="text-center p-8 lg:p-10 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-4">50+</div>
+                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base lg:text-lg">Events Per Year</p>
               </div>
-              <div className="text-center p-8 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-3">15+</div>
-                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base">Projects Shipped</p>
+              <div className="text-center p-8 lg:p-10 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-4">15+</div>
+                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base lg:text-lg">Projects Shipped</p>
               </div>
-              <div className="text-center p-8 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
-                <div className="text-4xl sm:text-5xl md:text-6xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-3">2024</div>
-                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base">Founded</p>
+              <div className="text-center p-8 lg:p-10 rounded-xl bg-gradient-to-br from-[#0f1628]/50 to-[#050a15]/50 border border-[#0066ff]/20 backdrop-blur-sm">
+                <div className="text-5xl sm:text-6xl lg:text-7xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-4">2024</div>
+                <p className="text-[#b0b0b0] font-medium text-sm sm:text-base lg:text-lg">Founded</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="py-32 px-6 sm:px-8 relative">
+        <section className="px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative">
           <div className="absolute inset-0 overflow-hidden pointer-events-none">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-[#0066ff]/5 rounded-full blur-3xl" />
           </div>
           <div className="max-w-4xl mx-auto text-center relative z-10">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+            <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
               <span className="bg-gradient-to-r from-[#ff0080] to-[#0066ff] bg-clip-text text-transparent">
                 Ready to Level Up?
               </span>
             </h2>
-            <p className="text-base sm:text-lg md:text-xl text-[#b0b0b0] mb-12 max-w-2xl mx-auto leading-relaxed px-4">
-              Whether you're a beginner or an experienced developer, there's a place for you in Parallax.
+            <p className="text-lg sm:text-xl md:text-2xl text-[#b0b0b0] mb-12 max-w-3xl mx-auto leading-relaxed">
+              Whether you&apos;re a beginner or an experienced developer, there&apos;s a place for you in Parallax.
               Join our community and start your journey in game development and immersive technologies.
             </p>
             <Link href="/contact" className="inline-block px-12 py-5 bg-gradient-to-r from-[#ff0080] to-[#0066ff] text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-[#ff0080]/50 transition-all duration-300 transform hover:scale-105 text-lg">
@@ -159,16 +161,11 @@ export default function Home() {
             </Link>
           </div>
         </section>
-        
-        {/* Footer */}
-        <footer className="border-t border-[#0066ff]/20 py-12 px-6 sm:px-8">
-          <div className="max-w-7xl mx-auto text-center">
-            <p className="text-[#b0b0b0]">
-              © 2024 Parallax Club - PESU Electronic City Campus. All rights reserved.
-            </p>
-          </div>
-        </footer>
+        </div>
       </main>
+      
+      {/* Footer */}
+      <Footer />
     </>
   );
 }

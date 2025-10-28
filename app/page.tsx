@@ -2,13 +2,19 @@
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import LoadingScreen from './components/LoadingScreen';
 import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 
 export default function Home() {
+  const [loading, setLoading] = useState(true);
   const [scrollY, setScrollY] = useState(0);
   const [visibleSections, setVisibleSections] = useState<Set<string>>(new Set());
   const sectionRefs = useRef<{ [key: string]: HTMLElement | null }>({});
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -140,6 +146,15 @@ export default function Home() {
       <Navbar />
       <main className="min-h-screen flex justify-center snap-y snap-mandatory overflow-y-scroll scroll-smooth">
         <div className="w-full max-w-7xl mx-auto flex flex-col items-center">
+        
+        {/* Loading Animation Section - First Snap Point */}
+        <section 
+          id="loading"
+          className="relative min-h-screen w-full flex flex-col items-center justify-center overflow-hidden snap-start snap-always"
+        >
+          <LoadingScreen onComplete={handleLoadingComplete} />
+        </section>
+
         {/* Hero Section */}
         <section 
           id="hero"

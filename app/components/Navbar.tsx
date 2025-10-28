@@ -45,9 +45,6 @@ export default function Navbar() {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link href="/contact" className="px-6 py-2.5 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg hover:shadow-lg hover:shadow-[#0066ff]/50 transition-all duration-300 transform hover:scale-105">
-              Join Now
-            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -74,9 +71,6 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <Link href="/contact" className="block px-4 py-2 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg text-center mt-4">
-              Join Now
-            </Link>
           </div>
         )}
       </div>

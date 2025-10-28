@@ -8,6 +8,9 @@
   --dark-bg: #050a15;
   --card-bg: #0f1628;
   --accent: #ff0080;
+  --section-stack-gap: 4rem;
+  --section-stack-gap-sm: 5rem;
+  --section-stack-gap-lg: 6rem;
 }
 
 * {
@@ -17,7 +20,7 @@
 }
 
 body {
-  background: linear-gradient(135deg, #050a15 0%, #0a0f1f 50%, #0f1628 100%);
+  background: transparent;
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
   min-height: 100vh;
@@ -93,6 +96,24 @@ html {
 
 .pulse-glow {
   animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.section-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-stack-gap);
+}
+
+@media (min-width: 640px) {
+  .section-stack {
+    gap: var(--section-stack-gap-sm);
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-stack {
+    gap: var(--section-stack-gap-lg);
+  }
 }
 
 /* Scrollbar styling */

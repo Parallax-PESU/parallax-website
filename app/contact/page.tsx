@@ -2,7 +2,7 @@
 
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { useState } from 'react';
+import { useState, type CSSProperties } from 'react';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -74,11 +74,23 @@ export default function Contact() {
 
           {/* Contact Form and Info */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full grid lg:grid-cols-2 gap-16">
+            <div
+              className="w-full grid lg:grid-cols-2 gap-16 items-start"
+              style={{
+                '--section-stack-gap': '4.5rem',
+                '--section-stack-gap-sm': '5.5rem',
+                '--section-stack-gap-lg': '2.5rem',
+              } as CSSProperties}
+            >
             {/* Contact Information */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#00d9ff] mb-10">Contact Information</h2>
-              <div className="space-y-8 mb-16">
+            <div className="section-stack">
+              <div className="space-y-3">
+                <h2 className="text-3xl sm:text-4xl font-bold text-[#00d9ff]">Contact Information</h2>
+                <p className="text-[#b0b0b0] text-base sm:text-lg leading-relaxed max-w-lg">
+                  Reach out through any of the channels below and we&apos;ll get back to you as soon as we can.
+                </p>
+              </div>
+              <div className="section-stack">
                 {contactInfo.map((info, index) => (
                   <a
                     key={index}
@@ -97,8 +109,8 @@ export default function Contact() {
               </div>
 
               {/* Social Links */}
-              <div>
-                <h3 className="text-2xl sm:text-3xl font-bold text-[#00d9ff] mb-8">Follow Us</h3>
+              <div className="section-stack">
+                <h3 className="text-2xl sm:text-3xl font-bold text-[#00d9ff]">Follow Us</h3>
                 <div className="flex flex-wrap gap-5">
                   {[
                     { icon: '🔗', name: 'LinkedIn', link: '#' },
@@ -120,8 +132,8 @@ export default function Contact() {
             </div>
 
             {/* Contact Form */}
-            <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-[#00d9ff] mb-10">Send us a Message</h2>
+            <div className="section-stack">
+              <h2 className="text-3xl sm:text-4xl font-bold text-[#00d9ff]">Send us a Message</h2>
               <form onSubmit={handleSubmit} className="space-y-7">
                 <div>
                   <label htmlFor="name" className="block text-base font-semibold text-[#e0e0e0] mb-3">
@@ -211,9 +223,9 @@ export default function Contact() {
 
           {/* FAQ Section */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full space-y-12 sm:space-y-16">
-              <div className="border-t border-[#0066ff]/20 pt-12">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-16">
+            <div className="w-full section-stack">
+              <div className="border-t border-[#0066ff]/20 pt-12 section-stack">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center">
               <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
                 Frequently Asked Questions
               </span>

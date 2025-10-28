@@ -66,9 +66,9 @@ export default function About() {
 
           {/* Values Section */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full space-y-12 sm:space-y-14 lg:space-y-16">
+            <div className="w-full section-stack">
             <div className="text-center space-y-4 sm:space-y-6">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                 <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
                   Our Core Values
                 </span>
@@ -115,13 +115,10 @@ export default function About() {
           {/* Call to Action */}
           <section className="min-h-screen w-full flex items-center justify-center snap-start snap-always py-16 sm:py-20 lg:py-24">
             <div className="text-center p-12 sm:p-14 lg:p-16 rounded-2xl bg-gradient-to-r from-[#0066ff]/10 to-[#00d9ff]/10 border border-[#0066ff]/30 max-w-4xl w-full">
-              <h2 className="text-4xl sm:text-5xl font-bold mb-8">Ready to Join?</h2>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-8">Ready to Learn More?</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0] mb-10  mx-auto leading-relaxed">
-                Join our vibrant community and start your journey in game development and immersive technologies!
+                Explore our community and discover the opportunities in game development and immersive technologies!
               </p>
-              <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-[#0066ff]/50 transition-all duration-300 transform hover:scale-105 text-lg">
-                Join Parallax Today
-              </a>
             </div>
           </section>
         </div>

@@ -65,9 +65,6 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center mb-20">
-              <Link href="/contact" className="w-full sm:w-auto px-10 py-4 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-[#0066ff]/50 transition-all duration-300 transform hover:scale-105 text-center">
-                Join Us Today
-              </Link>
               <Link href="/about" className="w-full sm:w-auto px-10 py-4 border-2 border-[#0066ff] text-[#00d9ff] font-bold rounded-lg hover:bg-[#0066ff]/10 transition-all duration-300 text-center">
                 Learn More
               </Link>
@@ -84,12 +81,12 @@ export default function Home() {
         </section>
 
         {/* What We Offer & Impact Section */}
-        <section className="min-h-screen w-full px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24 relative flex items-center snap-start snap-always">
+        <section className="min-h-screen w-full px-4 sm:px-6 lg:px-8 py-28 sm:py-32 lg:py-36 relative flex items-center snap-start snap-always">
           <div className="absolute inset-0 bg-gradient-to-r from-[#0066ff]/5 via-transparent to-[#00d9ff]/5" />
           
-          <div className="w-full relative z-10 py-10">
-            <div className="text-center mb-10 sm:mb-16 lg:mb-20 ">
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+          <div className="w-full relative z-10 py-10 section-stack">
+            <div className="text-center space-y-4 sm:space-y-5">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold">
                 <span className="bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent">
                   What We Offer
                 </span>
@@ -98,42 +95,43 @@ export default function Home() {
                 Building a thriving community of game developers and innovators
               </p>
             </div>
-
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 mx-auto mb-16 sm:mb-20 lg:mb-24">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="group p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-[#0f1628] to-[#050a15] border border-[#0066ff]/20 hover:border-[#00d9ff]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0066ff]/20 hover:-translate-y-2 text-center"
-                >
-                  <div className="text-5xl lg:text-6xl mb-5 group-hover:scale-110 transition-transform duration-500">
-                    {feature.icon}
+            <div className="section-stack">
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 gap-y-12 lg:gap-8 mx-auto">
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="group p-8 lg:p-10 rounded-2xl bg-gradient-to-br from-[#0f1628] to-[#050a15] border border-[#0066ff]/20 hover:border-[#00d9ff]/50 transition-all duration-500 hover:shadow-2xl hover:shadow-[#0066ff]/20 hover:-translate-y-2 text-center"
+                  >
+                    <div className="text-5xl lg:text-6xl mb-5 group-hover:scale-110 transition-transform duration-500">
+                      {feature.icon}
+                    </div>
+                    <h3 className="text-xl lg:text-2xl font-bold text-[#e0e0e0] mb-3 group-hover:text-[#00d9ff] transition-colors duration-300">
+                      {feature.title}
+                    </h3>
+                    <p className="text-[#b0b0b0] leading-relaxed text-sm lg:text-base">
+                      {feature.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl lg:text-2xl font-bold text-[#e0e0e0] mb-3 group-hover:text-[#00d9ff] transition-colors duration-300">
-                    {feature.title}
-                  </h3>
-                  <p className="text-[#b0b0b0] leading-relaxed text-sm lg:text-base">
-                    {feature.description}
-                  </p>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
 
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mx-auto">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="text-center p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-[#0f1628]/80 to-[#050a15]/80 border border-[#0066ff]/30 backdrop-blur-sm hover:border-[#00d9ff]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0066ff]/20"
-                >
-                  <div className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-3">
-                    {stat.number}
+              {/* Stats Grid */}
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mx-auto">
+                {stats.map((stat, index) => (
+                  <div
+                    key={index}
+                    className="text-center p-6 lg:p-8 rounded-2xl bg-gradient-to-br from-[#0f1628]/80 to-[#050a15]/80 border border-[#0066ff]/30 backdrop-blur-sm hover:border-[#00d9ff]/50 transition-all duration-500 hover:-translate-y-2 hover:shadow-xl hover:shadow-[#0066ff]/20"
+                  >
+                    <div className="text-4xl sm:text-5xl lg:text-6xl font-bold bg-gradient-to-r from-[#0066ff] to-[#00d9ff] bg-clip-text text-transparent mb-3">
+                      {stat.number}
+                    </div>
+                    <p className="text-[#b0b0b0] font-semibold text-xs sm:text-sm lg:text-base">
+                      {stat.label}
+                    </p>
                   </div>
-                  <p className="text-[#b0b0b0] font-semibold text-xs sm:text-sm lg:text-base">
-                    {stat.label}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

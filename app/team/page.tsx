@@ -62,9 +62,9 @@ export default function Team() {
 
           {/* Leadership */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full space-y-12 sm:space-y-16">
-            <div className="text-center mb-16 sm:mb-20">
-              <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff] mb-5">Leadership Team</h2>
+            <div className="w-full section-stack">
+            <div className="text-center space-y-4 sm:space-y-5">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff]">Leadership Team</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0]">Steering Parallax towards excellence</p>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
@@ -87,9 +87,9 @@ export default function Team() {
 
           {/* Core Team Members */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full space-y-12 sm:space-y-16">
-            <div className="text-center mb-16 sm:mb-20">
-              <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff] mb-5">Core Team Members</h2>
+            <div className="w-full section-stack">
+            <div className="text-center space-y-4 sm:space-y-5">
+              <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff]">Core Team Members</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0]">The backbone of our community</p>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 lg:gap-8">
@@ -111,15 +111,12 @@ export default function Team() {
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
             <div className="w-full">
             <div className="p-12 sm:p-14 lg:p-16 rounded-2xl bg-gradient-to-r from-[#0066ff]/10 to-[#00d9ff]/10 border border-[#0066ff]/30 text-center">
-              <div className="text-7xl mb-10">🚀</div>
-              <h2 className="text-4xl sm:text-5xl font-bold mb-8">Join Our Team</h2>
+              <div className="text-7xl mb-10">�</div>
+              <h2 className="text-4xl sm:text-5xl font-bold mb-8">Our Team</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0] mb-10  mx-auto leading-relaxed">
-                We&apos;re always looking for passionate individuals to join our team. Whether you&apos;re a developer, 
-                designer, artist, or enthusiast, there&apos;s a place for you in Parallax!
+                We have a diverse and talented team of developers, designers, and creators. Together, we push the boundaries 
+                of game development and immersive technologies!
               </p>
-              <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-[#0066ff]/50 transition-all duration-300 transform hover:scale-105 text-lg">
-                Apply Now
-              </a>
             </div>
             </div>
           </section>

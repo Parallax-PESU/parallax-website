@@ -73,7 +73,7 @@ export default function Calendar() {
 
           {/* Upcoming Events */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full space-y-12 sm:space-y-14 lg:space-y-16">
+            <div className="w-full section-stack">
             <div className="text-center space-y-4 sm:space-y-6">
               <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff] mb-5">Upcoming Events</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0]">Don&apos;t miss out on these exciting opportunities</p>
@@ -118,7 +118,7 @@ export default function Calendar() {
 
           {/* Google Calendar Embed */}
           <section className="min-h-screen w-full flex items-center snap-start snap-always py-16 sm:py-20 lg:py-24">
-            <div className="w-full space-y-12 sm:space-y-14 lg:space-y-16">
+            <div className="w-full section-stack">
             <div className="text-center space-y-4 sm:space-y-6">
               <h2 className="text-4xl sm:text-5xl font-bold text-[#00d9ff] mb-5">Full Calendar</h2>
               <p className="text-lg sm:text-xl text-[#b0b0b0]">View all our events in one place</p>
@@ -147,9 +147,6 @@ export default function Calendar() {
               Mark your calendars and join us for amazing events. Whether you&apos;re interested in game development, 
               AR/VR, or just want to connect with fellow enthusiasts, we have something for everyone!
             </p>
-            <a href="/contact" className="inline-block px-10 py-4 bg-gradient-to-r from-[#0066ff] to-[#00d9ff] text-white font-bold rounded-lg hover:shadow-2xl hover:shadow-[#0066ff]/50 transition-all duration-300 transform hover:scale-105 text-lg">
-              Subscribe to Updates
-            </a>
             </div>
           </section>
         </div>

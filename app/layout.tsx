@@ -1,16 +1,78 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Background from "./components/Background";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const raleway = localFont({
+  src: [
+    {
+      path: "./assets/fonts/Raleway-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Raleway-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Raleway-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Raleway-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Raleway-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Raleway-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-raleway",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const lato = localFont({
+  src: [
+    {
+      path: "./assets/fonts/Lato-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Lato-LightItalic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "./assets/fonts/Lato-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Lato-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "./assets/fonts/Lato-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "./assets/fonts/Lato-BoldItalic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+  ],
+  variable: "--font-lato",
 });
 
 export const metadata: Metadata = {
@@ -26,7 +88,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${raleway.variable} ${lato.variable} antialiased`}
       >
         <Background />
         {children}

@@ -35,7 +35,7 @@ export default function ParallaxHero() {
             opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
-            duration: 8,
+            duration: 4,
             repeat: Infinity,
             ease: "easeInOut",
           }}
@@ -54,7 +54,7 @@ export default function ParallaxHero() {
               initial={{ opacity: 0, y: 100, rotateX: -90 }}
               animate={{ opacity: 1, y: 0, rotateX: 0 }}
               transition={{
-                duration: 0.8,
+                duration: 0.6,
                 delay: index * 0.1,
                 ease: [0.25, 0.46, 0.45, 0.94],
               }}

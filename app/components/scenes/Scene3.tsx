@@ -13,6 +13,7 @@ const stats = [
 export default function Scene3() {
   return (
     <StorySection
+      id="community"
       index={2}
       title="Building a Thriving Community"
       description={
@@ -27,7 +28,7 @@ export default function Scene3() {
         </div>
       }
       imageContent={
-        <div className="grid grid-cols-2 gap-4">
+        <div className="grid grid-cols-2 gap-6 p-4 w-full min-h-[250px] auto-rows-fr">
           {stats.map((stat, index) => (
             <StatCard key={index} {...stat} index={index} />
           ))}

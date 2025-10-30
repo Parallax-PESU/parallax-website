@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import ParallaxHero from './components/ParallaxHero';
 import ScrollProgress from './components/ScrollProgress';
-import { Scene1, Scene2, Scene3, Scene4, Scene5, Scene6 } from './components/scenes';
+import { Scene1, Scene2, Scene3, Scene4, Scene5, Scene6, Scene7, Scene8 } from './components/scenes';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 
@@ -62,7 +62,7 @@ export default function Home() {
     setLoading(false);
   };
 
-  const sections = ['parallax-hero', 'hero', 'mission', 'community', 'innovation', 'impact', 'join'];
+  const sections = ['parallax-hero', 'hero', 'mission', 'community', 'innovation', 'impact', 'values', 'highlights', 'join'];
 
   return (
     <>
@@ -100,6 +100,12 @@ export default function Home() {
 
         {/* Scene 5: Impact */}
         <Scene5 />
+
+        {/* Scene 7: Core Values */}
+        <Scene7 />
+
+        {/* Scene 8: What We Offer */}
+        <Scene8 />
 
         {/* Scene 6: Join CTA */}
         <Scene6 />

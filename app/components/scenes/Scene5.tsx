@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 export default function Scene5() {
   return (
     <StorySection
+      id="impact"
       index={4}
       title="Creating Real Impact"
       description={

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 export default function Scene4() {
   return (
     <StorySection
+      id="innovation"
       index={3}
       title="Where Innovation Meets Creativity"
       description={

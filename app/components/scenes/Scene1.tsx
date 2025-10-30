@@ -49,16 +49,6 @@ export default function Scene1() {
       </div>
 
       <div className="relative z-10 text-center max-w-5xl w-full">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-10"
-        >
-          <span className="inline-block px-5 py-2.5 rounded-full border border-[#0066ff]/50 bg-[#0066ff]/10 text-[#00d9ff] font-semibold text-sm tracking-wide">
-            ✨ Welcome to Parallax Club
-          </span>
-        </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
@@ -79,7 +69,7 @@ export default function Scene1() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-base sm:text-lg md:text-xl text-[#b0b0b0] mb-12 max-w-3xl mx-auto leading-relaxed px-4"
+          className="text-base sm:text-lg md:text-xl text-[#b0b0b0] mb-12 mx-auto leading-relaxed px-4"
         >
           Join Parallax, the Game Development and AR/VR club at PESU Electronic City Campus. 
           Create, innovate, and collaborate with fellow enthusiasts in cutting-edge immersive technologies.
@@ -99,12 +89,6 @@ export default function Scene1() {
             <span className="relative z-10 text-white font-bold">Learn More</span>
           </Link>
           
-          <Link 
-            href="/contact" 
-            className="w-full sm:w-auto px-10 py-4 border-2 border-[#0066ff] text-[#00d9ff] font-bold rounded-lg hover:bg-[#0066ff]/10 transition-all duration-300"
-          >
-            Join the Club
-          </Link>
         </motion.div>
 
         <motion.div
@@ -113,18 +97,6 @@ export default function Scene1() {
           transition={{ duration: 0.8, delay: 1 }}
           className="flex flex-col items-center gap-2 opacity-70 hover:opacity-100 transition-opacity"
         >
-          <span className="text-xs text-[#b0b0b0] uppercase tracking-wider">Scroll to explore our story</span>
-          <div className="w-6 h-10 border-2 border-[#0066ff]/50 rounded-full flex items-start justify-center p-2">
-            <motion.div
-              className="w-1.5 h-3 bg-[#00d9ff] rounded-full"
-              animate={{ y: [0, 12, 0] }}
-              transition={{
-                duration: 1.5,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
-            />
-          </div>
         </motion.div>
       </div>
     </section>

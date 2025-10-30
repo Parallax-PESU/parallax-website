@@ -62,17 +62,6 @@ export default function Scene6() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row gap-5 justify-center items-center"
         >
-          <Link 
-            href="/contact" 
-            className="group relative w-full sm:w-auto px-12 py-5 overflow-hidden rounded-lg"
-          >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-[#ff0080] to-[#0066ff]"
-              whileHover={{ scale: 1.1 }}
-              transition={{ duration: 0.3 }}
-            />
-            <span className="relative z-10 text-white font-bold text-lg">Join the Club</span>
-          </Link>
           
           <Link 
             href="/team" 

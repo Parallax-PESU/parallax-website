@@ -10,6 +10,7 @@ interface StorySectionProps {
   imagePosition?: 'left' | 'right';
   index: number;
   backgroundColor?: string;
+  id?: string;
 }
 
 export default function StorySection({
@@ -18,6 +19,7 @@ export default function StorySection({
   imageContent,
   imagePosition = 'left',
   backgroundColor = 'transparent',
+  id,
 }: StorySectionProps) {
   const sectionRef = useRef<HTMLDivElement>(null);
   
@@ -65,6 +67,7 @@ export default function StorySection({
 
   return (
     <motion.section
+      id={id}
       ref={sectionRef}
       style={{ 
         opacity,
@@ -94,7 +97,7 @@ export default function StorySection({
             style={{ y: imageY }}
             className={`relative group ${imagePosition === 'right' ? 'lg:col-start-2' : ''}`}
           >
-            <div className="relative overflow-hidden rounded-2xl">
+            <div className="relative rounded-2xl">
               {imageContent}
             </div>
           </motion.div>

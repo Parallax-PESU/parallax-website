@@ -14,7 +14,9 @@ export default function Navbar() {
     { name: 'About', href: '/about' },
     { name: 'Calendar', href: '/calendar' },
     { name: 'Team', href: '/team' },
-    { name: 'Resources', href: '/resources' },
+    { name: 'Gallery - X', href: '/gallery' },
+    { name: 'Blog - X', href: '/blog' },
+    { name: 'Projects', href: '/resources' },
     { name: 'Contact', href: '/contact' },
   ];
 
@@ -53,21 +55,21 @@ export default function Navbar() {
 
       {/* Sidebar */}
       <nav
-        className={`fixed top-50 left-6 h-full w-64 backdrop-blur-lg border-r border-[#0066ff]/20 shadow-2xl z-50 transition-transform duration-500 ease-in-out ${
+        className={`fixed top-50 left-6 h-full w-64 backdrop-blur-lg border-r border-[#0066ff]/20 shadow-2xl z-50 transition-transform duration-500 ease-in-out overflow-hidden ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
-        <div className="flex flex-col h-full p-8">
+        <div className="flex flex-col h-full p-8 overflow-hidden">
           {/* Spacer for logo */}
           <div className="mb-20 mt-20"></div>
 
           {/* Navigation Items */}
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-6 overflow-hidden">
             {navItems.map((item, index) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-[#e0e0e0] text-xl font-semibold hover:text-[#00d9ff] transition-all duration-300 relative group py-2 pl-2"
+                className="text-[#e0e0e0] text-xl font-semibold hover:text-[#00d9ff] transition-all duration-300 relative group py-2 pl-2 overflow-hidden"
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
                 onClick={() => setIsOpen(false)}
@@ -78,7 +80,7 @@ export default function Navbar() {
                 }}
               >
                 <span className="relative z-10">{item.name}</span>
-                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-[#0066ff] via-[#0088ff] to-[#00d9ff] group-hover:w-full max-w-4xl transition-all duration-500 ease-out shadow-[0_0_8px_rgba(0,217,255,0.5)]" />
+                <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-gradient-to-r from-[#0066ff] via-[#0088ff] to-[#00d9ff] group-hover:w-full transition-all duration-500 ease-out shadow-[0_0_8px_rgba(0,217,255,0.5)]" />
                 <span className="absolute left-0 bottom-0 w-0 h-1 bg-gradient-to-r from-[#0066ff] via-[#0088ff] to-[#00d9ff] blur-sm group-hover:w-full transition-all duration-500 ease-out opacity-50" />
               </Link>
             ))}

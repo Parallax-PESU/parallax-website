@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 export default function Scene2() {
   return (
     <StorySection
+      id="mission"
       index={1}
       title="Our Mission"
       description={

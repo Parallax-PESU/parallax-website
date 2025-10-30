@@ -13,7 +13,7 @@ export default function StatCard({ number, label, index }: StatCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: false, amount: 0.5 }}
+      viewport={{ once: false, amount: 0.2 }}
       transition={{
         duration: 0.6,
         delay: index * 0.1,
@@ -21,7 +21,6 @@ export default function StatCard({ number, label, index }: StatCardProps) {
       }}
       whileHover={{ 
         scale: 1.05,
-        y: -10,
         transition: { duration: 0.3 }
       }}
       className="relative group"

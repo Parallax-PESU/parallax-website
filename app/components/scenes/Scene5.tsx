@@ -7,7 +7,7 @@ export default function Scene5() {
   return (
     <StorySection
       id="impact"
-      index={4}
+      index={3}
       title="Creating Real Impact"
       description={
         <div className="space-y-6">

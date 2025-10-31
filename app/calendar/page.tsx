@@ -143,7 +143,7 @@ export default function Calendar() {
             <div className="p-12 sm:p-16 rounded-2xl bg-gradient-to-r from-[#0066ff]/10 to-[#00d9ff]/10 border border-[#0066ff]/30 text-center max-w-4xl w-full">
             <div className="text-6xl mb-8">🎉</div>
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">Don&apos;t Miss Out!</h2>
-            <p className="text-[#b0b0b0] text-base sm:text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-[#b0b0b0] text-base sm:text-lg mb-10 mx-auto leading-relaxed">
               Mark your calendars and join us for amazing events. Whether you&apos;re interested in game development, 
               AR/VR, or just want to connect with fellow enthusiasts, we have something for everyone!
             </p>
